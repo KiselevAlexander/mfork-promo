@@ -1,0 +1,21 @@
+.button {
+    display: inline-block;
+    font-size: rem(20);
+    height: $em40;
+    background-color: #ad101c;
+    border-radius: $em20;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: em(1);
+    transition: background 0.3s ease;
+    outline: 0;
+    border: 0;
+    padding-left: em(24);
+    padding-right: em(24);
+    cursor: pointer;
+
+    &:hover {
+        background-color: #cd051c;
+    }
+
+}

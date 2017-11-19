@@ -1,3 +1,15 @@
+$baseFS: 16; // px
+
+@function em($px) {
+    @return #{$px / $baseFS * 1em};
+}
+
+@function rem($px) {
+    @return #{$px / $baseFS * 1rem};
+}
+
+$em1: .063em;
+$em2: .125em;
 $em3: .188em;
 $em5: .313em;
 $em10: .625em;
@@ -25,6 +37,8 @@ $em80: 5em;
 $em100: 6.25em;
 $em200: 12.5em;
 
+$rem1: .063rem;
+$rem2: .125rem;
 $rem3: .188rem;
 $rem5: .313rem;
 $rem10: .625rem;

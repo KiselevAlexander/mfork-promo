@@ -1,6 +1,59 @@
+* {
+    box-sizing: border-box;
+
+}
+
+html {
+    height: 100%;
+
+    @include phablet {
+        font-size: 14px;
+    }
+}
+
+body {
+
+    min-height: 100%;
+    position: relative;
+    font-family: 'PT Sans', sans-serif;
+    color: #373a3c;
+    letter-spacing: $em1;
+
+    &>.body-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        min-height: 100%;
+        z-index: -1;
+
+        background-color: #a8c144;
+        background-image: url('/img/bg_1.jpg');
+        background-repeat: no-repeat;
+        background-position: 100% 100%;
+        background-size: cover;
+        background-attachment: fixed;
+
+        filter: blur(3px);
+        
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            content: '';
+            opacity: .6;
+        }
+    }
+}
 
 h1 {
-
+    text-align: center;
+    margin-top: 2em;
+    font-size: $em44;
 }
 
 h2 {
@@ -20,5 +73,95 @@ ul {
         list-style-type: none;
         padding-left: 1em;
 
+    }
+}
+
+.wrapper {
+    padding-top: 92px;
+
+    @include phablet {
+        padding-top: 0;
+    }
+}
+
+.container {
+    max-width: 1140px;
+    padding: 0 1em;
+    margin: 0 auto;
+}
+
+
+.grid-2 {
+    display: flex;
+    flex-direction: row;
+
+    .col {
+        width: 50%;
+    }
+}
+
+@include phablet {
+    .phablet-1 {
+        display: flex;
+        flex-direction: column;
+        .col {
+            width: 100%;
+        }
+    }
+}
+
+/** Margin top **/
+@for $i from 1 through 14 {
+    .mt-#{$i * 10} {
+        margin-top: rem($i * 10);
+    }
+}
+
+/** Margin bottom **/
+@for $i from 1 through 14 {
+    .mb-#{$i * 10} {
+        margin-bottom: rem($i * 10);
+    }
+}
+
+/** Margin left **/
+@for $i from 1 through 14 {
+    .ml-#{$i * 10} {
+        margin-left: rem($i * 10);
+    }
+}
+
+/** Margin right **/
+@for $i from 1 through 14 {
+    .mr-#{$i * 10} {
+        margin-right: rem($i * 10);
+    }
+}
+
+/** Padding top **/
+@for $i from 1 through 14 {
+    .pt-#{$i * 10} {
+        margin-top: rem($i * 10);
+    }
+}
+
+/** Padding bottom **/
+@for $i from 1 through 14 {
+    .pb-#{$i * 10} {
+        padding-bottom: rem($i * 10);
+    }
+}
+
+/** Padding left **/
+@for $i from 1 through 14 {
+    .pl-#{$i * 10} {
+        padding-left: rem($i * 10);
+    }
+}
+
+/** Padding right **/
+@for $i from 1 through 14 {
+    .pr-#{$i * 10} {
+        padding-right: rem($i * 10);
     }
 }

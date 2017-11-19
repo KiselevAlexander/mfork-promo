@@ -1,0 +1,59 @@
+%input {
+    display: inline-block;
+    height: $em40;
+    border-radius: $em20;
+    padding-left: $em24;
+    padding-right: $em24;
+    border: $rem1 solid #bbbbbb;
+    outline: 0;
+    font-size: 1em;
+    transition: border .3s;
+    
+    &:focus {
+        border-color: #737373;
+    }
+}
+
+input {
+    &[type="text"],
+    &[type="email"],
+    &[type="phone"],
+    &[type="number"] {
+        @extend %input
+    }
+}
+
+textarea {
+    @extend %input
+}
+
+.input {
+
+    &-field {
+        font-size: $em20;
+        margin-bottom: $rem24;
+
+        label {
+            display: block;
+            font-size: 0.8em;
+            padding-left: $em24;
+            margin-bottom: $em5;
+            font-weight: bold;
+        }
+
+        .button {
+            margin-top: em(17);
+        }
+
+        input,
+        textarea {
+
+            max-width: rem(400);
+            width: 100%;
+
+            @include phablet {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -74,14 +74,8 @@ const config = {
 
 
 const VENDORS = [
-    'nodelist-foreach-polyfill',
     'core-js',
-    'jquery',
-    'swiper',
-    'wheel-indicator',
-    'device-detect',
-    'i18next',
-    'i18next-xhr-backend'
+    'jquery'
 ];
 
 // Set NODE_ENV to production
@@ -251,7 +245,7 @@ gulp.task('styles', function () {
         .pipe(gulp.dest(path.build.css));
 
     if (process.env.NODE_ENV !== 'production') {
-        b.pipe(reload({stream: true}));
+        b.pipe(browserSync.stream());
     }
 
 });
