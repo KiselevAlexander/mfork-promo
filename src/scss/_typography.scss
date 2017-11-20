@@ -176,7 +176,7 @@ a {
         display: flex;
         flex-direction: column;
         .col {
-            width: 100%;
+            width: 100% !important;
         }
     }
 }

@@ -40,3 +40,19 @@
     height: em(5);
     border-radius: 0;
 }
+
+.noUi-tooltip {
+    width: 140px;
+    margin-left: -8px;
+    background-color: transparent;
+    text-align: left;
+    border: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #bc0000;
+    transition: opacity 0.3s ease;
+    transform: none !important;
+
+    &.centred {
+    }
+}

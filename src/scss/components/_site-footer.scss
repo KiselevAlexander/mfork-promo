@@ -7,6 +7,8 @@
     background-color: #fff;
     font-size: em(14);
     color: $color-grayLight;
+    z-index: 99;
+    box-shadow: 0 -10px 15px rgba(0, 0, 0, .1);
 
     @include phablet {
         position: relative;

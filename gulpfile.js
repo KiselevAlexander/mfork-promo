@@ -76,7 +76,8 @@ const config = {
 const VENDORS = [
     'core-js',
     'jquery',
-    'nouislider'
+    'nouislider',
+    'wnumb'
 ];
 
 // Set NODE_ENV to production

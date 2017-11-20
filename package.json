@@ -10,7 +10,8 @@
         "core-js": "^2.5.1",
         "device-detect": "^1.0.7",
         "normalize.css": "^7.0.0",
-        "nouislider": "^10.1.0"
+        "nouislider": "^10.1.0",
+        "wnumb": "^1.1.0"
     },
     "devDependencies": {
         "babel-plugin-external-helpers": "^6.22.0",

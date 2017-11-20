@@ -1,15 +1,41 @@
 .calculator {
     .slider {
-        width: 60%;
+        max-width: 60%;
+        width: 100%;
         float: right;
         margin-right: em(24);
+
+        @include phablet {
+            float: none;
+            width: auto;
+            max-width: 100%;
+            margin-top: 2em;
+            margin-left: .5em;
+            margin-right: .5em;
+            margin-bottom: 1em;
+        }
 
         .description {
             font-size: em(14);
             line-height: 1.2;
         }
     }
+
     .value {
         display: inline-block;
+        max-width: 30%;
+        width: 100%;
+        @include phablet {
+            display: block;
+            max-width: 100%;
+            width: auto;
+        }
+    }
+
+    label {
+
+        @include phablet {
+            padding-left: 0;
+        }
     }
 }
