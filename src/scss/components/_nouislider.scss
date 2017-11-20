@@ -1,0 +1,42 @@
+@import '../../../node_modules/nouislider/distribute/nouislider';
+
+.noUi-target {
+    box-shadow: none;
+    border: none;
+    margin-top: em(18);
+    background: none;
+}
+
+.noUi-horizontal .noUi-handle {
+    top: -(em(12));
+    left: 0px;
+    width: em(20);
+    height: em(20);
+    border-radius: 50%;
+    border: em(3) solid #bc0000;
+    outline: 0;
+    cursor: pointer;
+    transform: translateX(-50%);
+
+    &:before,
+    &:after {
+        display: none;
+    }
+}
+
+.noUi-base {
+    background-color: transparent;
+}
+
+.noUi-base:before {
+    display: block;
+    content: '';
+    background-color: #bc0000;
+    height:em(5);
+}
+
+.noUi-origin {
+    background-color: #d7d7d7;
+    height: em(5);
+    border-radius: 0;
+}

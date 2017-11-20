@@ -75,7 +75,8 @@ const config = {
 
 const VENDORS = [
     'core-js',
-    'jquery'
+    'jquery',
+    'nouislider'
 ];
 
 // Set NODE_ENV to production
@@ -245,7 +246,7 @@ gulp.task('styles', function () {
         .pipe(gulp.dest(path.build.css));
 
     if (process.env.NODE_ENV !== 'production') {
-        b.pipe(browserSync.stream());
+        b.pipe(reload({stream: true, reloadDelay: 200}));
     }
 
 });

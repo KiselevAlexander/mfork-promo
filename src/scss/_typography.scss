@@ -76,6 +76,74 @@ ul {
     }
 }
 
+a {
+    color: $color-gray;
+    transition: color .3s;
+
+    &:hover {
+        color: $color-grayLight;
+    }
+
+}
+
+.position {
+
+    &-relative {
+        position: relative;
+    }
+
+    &-bsolute {
+        position: absolute;
+    }
+
+    &-fixed {
+        position: fixed;
+    }
+
+}
+
+.float {
+
+    &-left {
+        float: left;
+    }
+
+    &-right {
+        float: right;
+    }
+
+    &-none {
+        float: none;
+    }
+}
+
+.text {
+
+    &-center {
+        text-align: center;
+    }
+
+    &-left {
+        text-align: left;
+    }
+
+    &-right {
+        text-align: right;
+    }
+
+    &-uppercase {
+        text-transform: uppercase;
+    }
+
+    &-lowercase {
+        text-transform: lowercase;
+    }
+
+    &-capitalize {
+        text-transform: capitalize;
+    }
+}
+
 .wrapper {
     padding-top: 92px;
 
@@ -96,7 +164,10 @@ ul {
     flex-direction: row;
 
     .col {
-        width: 50%;
+        width: 40%;
+        &:first-child {
+            width: 60%;
+        }
     }
 }
 

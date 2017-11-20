@@ -1,0 +1,15 @@
+.calculator {
+    .slider {
+        width: 60%;
+        float: right;
+        margin-right: em(24);
+
+        .description {
+            font-size: em(14);
+            line-height: 1.2;
+        }
+    }
+    .value {
+        display: inline-block;
+    }
+}
