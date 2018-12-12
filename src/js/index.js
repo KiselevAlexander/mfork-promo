@@ -1,26 +1,30 @@
 import $ from 'jquery';
 import noUiSlider from 'nouislider';
 import wNumb from 'wnumb';
-import {getLanguage} from './language';
 
 const log = (val) => {
     console.log(val);
 };
 
+const CALC_DATA = {
+    sum: 400000,
+    term: 12
+};
+
 
 const paymentFormat = wNumb({
-    decimals: 2,
+    decimals: 0,
     mark: '.',
     thousand: ' ',
     prefix: '',
-    postfix: '₽'
+    postfix: ' ₽'
 });
 
 const caclMonthlyPaiment = () => {
 
     const PERC = 11;
-    const sum = $('#sum').val();
-    const term = $('#term').val();
+    const sum = CALC_DATA.sum;
+    const term = CALC_DATA.term;
 
     const monthlyPerc = (sum / 100 * PERC) / 12;
 
@@ -28,7 +32,7 @@ const caclMonthlyPaiment = () => {
 
     console.log(payment);
 
-    $('.monthly_payment .value').html(paymentFormat.to(payment));
+    $('.value.-pay').html(paymentFormat.to(payment));
 
 };
 
@@ -40,52 +44,41 @@ window.addEventListener('load', () => {
  * Сумма
  */
 const sumSlider = document.getElementById('sum-slider');
-const sumValue = document.getElementById('sum');
 
 const sumFormat = wNumb({
     decimals: 0,
     mark: '.',
     thousand: ' ',
     prefix: '',
-    postfix: '₽'
+    postfix: ' ₽'
 });
 
 noUiSlider.create(sumSlider, {
     start: 400000,
     range: {
         min: 400000,
-        max: 60000000
+        max: 30000000
     },
     format: sumFormat,
-    tooltips: true,
+    tooltips: false,
     step: 10000
 });
 
 sumSlider.noUiSlider.on('update', function( values, handle ) {
 
-    const value = values[handle].match(/[\d]/g).join('');
+    CALC_DATA.sum = values[handle].match(/[\d]/g).join('');
 
-    sumValue.value = Math.round(value);
-
-    caclMonthlyPaiment();
-
-});
-
-$(sumValue).change(({target}) => {
-
-    sumSlider.noUiSlider.set(target.value);
+    $('.value.-sum').html(values[handle]);
 
     caclMonthlyPaiment();
 
 });
-
 
 
 /**
  * Срок кредита
  */
 const termSlider = document.getElementById('term-slider');
-const termValue = document.getElementById('term');
 
 const termFormat = wNumb({
     decimals: 0,
@@ -98,29 +91,20 @@ const termFormat = wNumb({
 noUiSlider.create(termSlider, {
     start: 12,
     range: {
-        min: 2,
-        max: 360
+        min: 6,
+        max: 120
     },
     format: termFormat,
-    tooltips: true,
-    step: 2
+    tooltips: false,
+    step: 6
 });
 
 termSlider.noUiSlider.on('update', function( values, handle ) {
 
-    const value = values[handle].match(/[\d]/g).join('');
+    CALC_DATA.term = values[handle].match(/[\d]/g).join('');
 
-    termValue.value = Math.round(value);
-
-    caclMonthlyPaiment();
-
-});
-
-$(termValue).change(({target}) => {
-
-    termSlider.noUiSlider.set(target.value);
+    $('.value.-term').html(values[handle]);
 
     caclMonthlyPaiment();
 
 });
-

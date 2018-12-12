@@ -1,44 +1,20 @@
 .benefits {
-    margin-top: 4em;
+    margin-bottom: 40px;
 
-    @include phablet {
-        margin-top: 3em;
-    }
+    dl {
 
-    ul {
-        display: flex;
-
-        @include phablet {
-
-            flex-direction: column;
+        dt {
+            margin-bottom: 22px;
         }
 
-        li {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            font-size: em(20);
-            font-weight: bold;
-            line-height: 1.4;
-            padding: 0 .5em;
-
-
-            @include phablet {
-                margin-bottom: 2rem;
-            }
-
-            .icon {
-                display: inline-block;
-                height: $rem60;
-                margin-bottom: 1.5em;
-                color: #bf0000;
-
-                img,
-                svg {
-                    height: 100%;
-                }
-            }
+        dd {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.25;
+            margin: 0 auto;
+            max-width: 210px;
         }
+
     }
+
 }

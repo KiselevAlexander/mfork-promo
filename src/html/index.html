@@ -1,51 +1,98 @@
 @@include('./includes/_header.html')
+<header>
+    <div class="wrapper">
+        <div class="container">
+            <h1>Кредит под залог недвижимости</h1>
+            <div class="site-description">Ваши цели – наши средства!</div>
+        </div>
+    </div>
+</header>
 
-<div class="wrapper">
-    <div class="container">
-        <h1>Кредит под залог недвижимости</h1>
-        <div class="site-description">Ваши цели – наши средства!</div>
+@@include('./includes/_benefits.html')
 
-        @@include('./includes/_benefits.html')
-
-        <div class="grid-2 phablet-1 mt-100">
-            <div class="col">
-                <div class="calculator">
-                    <div class="sum input-field">
-                        <label for="sum">Сумма</label>
-                        <div class="slider">
-                            <div id="sum-slider"></div>
-                            <div class="description">
-                                от 400 000₽ до 60 000 000₽
-                            </div>
-                        </div>
-                        <div class="value">
-                            <input id="sum" type="number" value="400000" min="400000" max="60000000" step="10000">
+<section class="calc">
+    <div class="wrapper">
+        <div class="container">
+            <div class="grid-3 phablet-1">
+                <div class="col">
+                    <div class="text-center">
+                        <b>Необходимая сумма</b>
+                        <div class="value -sum">
+                            2 000 000 ₽
                         </div>
                     </div>
-                    <div class="term input-field">
-                        <label for="term">Срок</label>
-                        <div class="slider">
-                            <div id="term-slider"></div>
-                            <div class="description">
-                                от 2 мес. до 360 мес.
-                            </div>
-                        </div>
-                        <div class="value">
-                            <input id="term" type="number" value="12" min="2" max="360" step="2">
+                    <div id="sum-slider"></div>
+                </div>
+                <div class="col arrow-bg">
+                    <div class="text-center">
+                        <b>Срок</b>
+                        <div id="term" class="value -term">
+                            60 мес.
                         </div>
                     </div>
-                    <div class="monthly_payment input-field">
-                        <label for="term">Ежемесячный платёж</label>
-                        <div class="value">0</div>
+                    <div id="term-slider"></div>
+                </div>
+                <div class="col">
+                    <div class="text-center">
+                        <b>
+                            Ваш ежемесячный платеж
+                            составит примерно:
+                        </b>
+                        <div class="value -pay">
+                            42 396 ₽
+                        </div>
+                        <b>
+                            Расчет носит справочный характер.
+                        </b>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                @@include('./includes/_form.html')
-            </div>
         </div>
     </div>
-</div>
+</section>
+
+<!--<div class="wrapper">-->
+    <!--<div class="container">-->
+
+        <!--<div class="grid-2 phablet-1 mt-100">-->
+            <!--<div class="col">-->
+                <!--<div class="calculator">-->
+                    <!--<div class="sum input-field">-->
+                        <!--<label for="sum">Сумма</label>-->
+                        <!--<div class="slider">-->
+                            <!--<div id="sum-slider"></div>-->
+                            <!--<div class="description">-->
+                                <!--от 400 000₽ до 60 000 000₽-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="value">-->
+                            <!--<input id="sum" type="number" value="400000" min="400000" max="60000000" step="10000">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="term input-field">-->
+                        <!--<label for="term">Срок</label>-->
+                        <!--<div class="slider">-->
+                            <!--<div id="term-slider"></div>-->
+                            <!--<div class="description">-->
+                                <!--от 2 мес. до 360 мес.-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="value">-->
+                            <!--<input id="term" type="number" value="12" min="2" max="360" step="2">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="monthly_payment input-field">-->
+                        <!--<label for="term">Ежемесячный платёж</label>-->
+                        <!--<div class="value">0</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col">-->
+                <!--@@include('./includes/_form.html')-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
 
 @@include('./includes/_footer.html')
 

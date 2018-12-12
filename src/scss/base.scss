@@ -2,13 +2,10 @@
         'fonts';
 
 
-@import 'typography',
-'components/site-header',
+@import 'grid',
+'typography',
 'components/benefits',
-'components/site-description',
+'components/calc',
 'components/input',
 'components/button',
-'components/nouislider',
-'components/calculator',
-'components/accept-rules',
-'components/site-footer';
+'components/nouislider';

@@ -8,15 +8,17 @@
 }
 
 .noUi-horizontal .noUi-handle {
-    top: -(em(12));
+    top: -(em(9));
     left: 0px;
-    width: em(20);
-    height: em(20);
+    width: em(14);
+    height: em(14);
     border-radius: 50%;
-    border: em(3) solid #bc0000;
+    border: em(3) solid #fff;
     outline: 0;
     cursor: pointer;
     transform: translateX(-50%);
+    background-color: #23a7f1;
+    box-shadow: none !important;
 
     &:before,
     &:after {
@@ -31,13 +33,13 @@
 .noUi-base:before {
     display: block;
     content: '';
-    background-color: #bc0000;
-    height:em(5);
+    background-color: #fff;
+    height:em(3);
 }
 
 .noUi-origin {
     background-color: #d7d7d7;
-    height: em(5);
+    height: em(3);
     border-radius: 0;
 }
 
